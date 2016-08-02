@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> Andrew's project</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css\main.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css"/>
+	<link rel="stylesheet" type="text/css" href="Bootstrap-Sortable\Contents\bootstrap-sortable.css">
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script   src="https://cdn.jsdelivr.net/tether/1.3.3/tether.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="Bootstrap-Sortable\Scripts\bootstrap-sortable.js"></script>
+	<script type="text/javascript" src="js\page.js">
+	</script>
+</head>
+<body>
+	<div id="container" class="container-fluid"  >
+		<div class="row">
+			<nav class="navbar navbar-dark bg-faded">
+				<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target=".navbar-toggleable-xs">
+					&#9776;
+				</button>
+				<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+
+					<a class="navbar-brand" href="#">Home page</a>
+
+					<form class="navbar-form" >
+						<input class="form-control" placeholder="Search" type="text">
+					</form>
+
+					<ul class="nav navbar-nav navbar_right" >
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="fa fa-gear" aria-hidden="true" ></i> Settings
+							</a>
+						</li>
+						<li class="nav-item dropdown ">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+								<i class="fa fa-language" aria-hidden="true" ></i> Language
+							</a>
+							<div class="dropdown-menu dropdown-menu-right " role="menu" >
+								<div class="notify-arrow notify-arrow-blue"></div>
+								<a class="dropdown-item " href="#"><span class="flag-icon flag-icon-ru" ></span> Русский</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" ><span class="flag-icon flag-icon-am" ></span> Հայերեն</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"><span class="flag-icon flag-icon-gb" ></span> English</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"><span class="flag-icon flag-icon-de" ></span> Deutsch</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="fa fa-question-circle" aria-hidden="true" ></i> Help
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link " href="#" data-toggle="modal" data-target="#gridSystemModal">
+								<i class="fa fa-bed" aria-hidden="true"></i> Logout
+							</a>
+							<div id="gridSystemModal" class="modal fade bd-exaqmple-modal-sm" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-sm" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<b>Are you sure you want to log out?</b>
+										</div>
+										<div class="modal-body">
+											<i>Some changes haven't been saved. Loging out will discard them.</i>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-success" id="login_button">Yes, I'm sure</button>
+											<button type="button" class="btn btn-danger"  data-dismiss="modal">No, thanks!</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<aside class="row">
+
+			<div class="nav  sidebar-collapse">
+				<li><a href="index.html"><i class="fa fa-dashboard" aria-hidden="true" ></i> Dashboard</a></li>
+				<li><a href="widgets.html"><i class="fa fa-codepen" aria-hidden="true" ></i> Widgets</a></li>
+
+				<li class="chart_color"><a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					<i class="fa fa-area-chart" aria-hidden="true" ></i> Charts</a>
+				</li>
+				<div class="collapse " id="collapseExample">
+					<div class="">
+						<li class="chart_list_padding"><a href="line_chart.html"><i class="fa fa-line-chart" aria-hidden="true" ></i> Line charts</a></li>
+						<li class="chart_list_padding"><a href="pie_chart.html"><i class="fa fa-pie-chart" aria-hidden="true" ></i> Pie charts</a></li>
+						<li class="chart_list_padding"><a href="radar_chart.html"><i class="fa fa-circle-o-notch" aria-hidden="true" ></i> Radar&Polar charts</a></li>
+						<li class="chart_list_padding"><a href="bar_chart.html"><i class="fa fa-bar-chart" aria-hidden="true" ></i> Bar charts</a></li>  
+					</div>
+				</div>
+				<li  class="white"><a href="tables.html"><i class="fa fa-table" aria-hidden="true" ></i> Tables</a>
+				</li>
+				<li><a href="forms.html"><i class="fa fa-wpforms" aria-hidden="true" ></i> Forms</a>
+				</li>
+				<li><a href="calendar.html"><i class="fa fa-calendar" aria-hidden="true" ></i> Calendar</a>
+				</li>
+			</div>
+		</aside>
+		<div class="div_to_right">
+
+			<h1 > Tables </h1>
+			<hr>
+			<div class="row">
+
+				<div class="col-lg-12">
+					<table class="table table-bordered table-striped table-hover sortable">
+						<caption>
+							Andrew's table
+						</caption>
+						<thead>
+							<tr>
+								<th data-defaultsign="_19" class="nosort" data-sortcolumn="0" data-sortkey="0-0">#</th>
+								<th data-defaultsign="AZ" class="nosort" data-sortcolumn="1" data-sortkey="1-0">First Name</th>
+								<th class="nosort" data-sortcolumn="2" data-sortkey="2-0">Last Name</th>
+								<th data-defaultsign="month" class="up sorted" data-sortcolumn="3" data-sortkey="3-0">Birthday<span class="sign month up"></span></th>
+								<th  data-sortcolumn="4" data-sortkey="4-0">Color label</th>
+							</tr>
+						</thead>
+						<tbody>
+
+
+
+							<tr>
+								<td data-value="2">2</td>
+								<td data-value="Jacob" class="">Jacob</td>
+								<td data-value="Thornton" class="">Thornton</td>
+								<td data-dateformat="MM-DD-YYYY" data-value="1980/11/11/00/00/00" class="sorted">11-11-1980</td>
+								<td data-value="primary"><span class="label label-pill label-primary">Primary</span></td>
+							</tr>
+							<tr class="table-success">
+								<td data-value="1">1</td>
+								<td data-value="Mark" class="">Mark</td>
+								<td data-value="Otto" class="">Otto</td>
+								<td data-dateformat="MM-DD-YYYY" data-value="1970/11/11/00/00/00" class="sorted">11-11-1970</td>
+								<td data-value="warning"><span class="label label-pill label-warning">Warning</span></td>
+							</tr>
+							<tr>
+								<td data-value="3">3</td>
+								<td data-value="Larry" class="">Larry</td>
+								<td data-value="White" class="">White</td>
+								<td data-dateformat="MM-DD-YYYY" data-value="1960/11/11/00/00/00" class="sorted">11-11-1960</td>
+								<td data-value="success"><span class="label label-success">Success</span></td>
+							</tr>
+							<tr class="table-info">
+								<td data-value="4">4</td>
+								<td data-value="Sergey" class="">Sergey</td>
+								<td data-value="Black" class="">Black</td>
+								<td data-dateformat="MM-DD-YYYY" data-value="1977/08/11/00/00/00" class="sorted">11-08-1977</td>
+								<td data-value="info"><span class="label label-info">Info</span></td>
+							</tr>
+							<tr>
+								<td data-value="5">5</td>
+								<td data-value="Bob" class="">Bob</td>
+								<td data-value="Marley" class="">Marley</td>
+								<td data-dateformat="MM-DD-YYYY" data-value="1989/06/05/00/00/00" class="sorted">05-06-1989</td>
+								<td data-value="danger"><span class="label label-danger">Danger</span></td>
+							</tr>
+							<tr class="table-warning">
+								<td data-value="6">6</td>
+								<td data-value="Charlie" class="">Charlie</td>
+								<td data-value="Sean" class="">Sean</td>
+								<td data-dateformat="MM-DD-YYYY" data-value="1975/05/11/00/00/00" class="sorted">11-05-1975</td>
+								<td data-value="warning"><span class="label label-danger">Warning</span></td>
+							</tr>    
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
+			<hr>
+			<div class="row">
+
+				<div class="col-lg-12">
+<div class="clearfix tables_style2" >
+						<div class="pull-left">Best gifts</div>
+						<div class="widget-icons pull-right">
+							<a href="#" class="table_min"><i class="fa fa-chevron-up"></i></a> 
+							<a href="#" class="table_close"><i class="fa fa-times"></i></a>
+						</div>  
+					</div>
+					<!-- Widget content -->
+					<div class="">
+						<table class="table table-striped table-hover sortable">
+							<thead>
+							<tr>
+								<th>#</th>
+								<th data-sortcolumn="0" data-sortkey="0-0">Item</th>
+								<th data-sortcolumn="1" data-sortkey="1-0">Apreciation</th>
+								<th>Action</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td><i class="fa fa-car" aria-hidden="true" ></i></td>
+								<td data-value="Car">Car</td>
+								<td>89%</td>
+								<td><span><a href="#" class="table_close"><i class="fa fa-times"></i></a></span></td>
+							</tr> 
+							<tr>
+								<td><i class="fa fa-camera" aria-hidden="true" ></i></td>
+								<td data-value="Camera">Camera</td>
+								<td>78%</td>
+								<td><span><a href="#" class="table_close"><i class="fa fa-times"></i></a></span></td>
+							</tr> 
+							<tr>
+								<td><i class="fa fa-laptop" aria-hidden="true" ></i></td>
+								<td data-value="Laptop">Laptop</td>
+								<td>85%</td>
+								<td><span><a href="#" class="table_close"><i class="fa fa-times"></i></a></span></td>
+							</tr> 
+							<tr>
+								<td><i class="fa fa-motorcycle" aria-hidden="true" ></i></td>
+								<td data-value="Motorcycle">Motorcycle</td>
+								<td>33%</td>
+								<td><span><a href="#" class="table_close"><i class="fa fa-times"></i></a></span></td>
+							</tr> 
+							<tr>
+								<td><i class="fa fa-plane" aria-hidden="true" ></i></td>
+								<td data-value="Plane">Plane</td>
+								<td>12%</td>
+								<td><span><a href="#" class="table_close"><i class="fa fa-times"></i></a></span></td>
+							</tr>                                                                                               
+							<tr>
+								<td><i class="fa fa-bicycle" aria-hidden="true" ></i></td>
+								<td data-value="Bicycle">Bicycle</td>
+								<td>27%</td>
+								<td><span><a href="#" class="table_close"><i class="fa fa-times"></i></a></span></td>
+							</tr>                                                                   
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>
